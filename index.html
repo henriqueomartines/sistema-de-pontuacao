@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Pontuacao</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sistema de Pontuacao</h1>
+    <p>Pontuacao atual: <span id="score">0</span> XP</p>
+
+    <button type="button" onclick="changeScore(10)">+10 XP</button>
+    <button type="button" onclick="changeScore(-5)">-5 XP</button>
+  </div>
+
+  <script>
+    const scoreElement = document.getElementById("score");
+    let score = 0;
+
+    function changeScore(value) {
+      score += value;
+      scoreElement.textContent = score;
+    }
+  </script>
+</body>
+</html>
